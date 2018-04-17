@@ -1,0 +1,49 @@
+{
+  "name": "jsmp-infra-first-task",
+  "version": "2.0.1",
+  "description": "package of different js functions ",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run compile && npm run test",
+    "clean": "rimraf lib/",
+    "compile": "babel source --out-dir lib --presets=es2015,stage-0",
+    "test": "mocha --compilers js:babel-core/register test/**/*.js",
+    "watch": "babel source --watch --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petrenckira/jsmp-infra-first-task.git"
+  },
+  "author": "Iryna <petrenckira@gmail.com>",
+  "lcdicense": "ISC",
+  "keywords": [
+    "javascript",
+    "es5",
+    "babel"
+  ],
+  "bugs": {
+    "url": "https://github.com/petrenckira/jsmp-infra-first-task/issues"
+  },
+  "dependencies": {
+    "rimraf": "2.5.4"
+  },
+  "deprecated": false,
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "del-cli": "^1.1.0",
+    "markdown-it": "^8.4.0",
+    "mocha": "^5.0.5",
+    "prettier": "^1.9.2"
+  },
+  "engines": {
+    "node": ">=8.11.1",
+    "npm": ">=5.5.1"
+  },
+  "homepage": "https://github.com/petrenckira/jsmp-infra-first-task#readme"
+}
