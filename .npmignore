@@ -1,5 +1,6 @@
 .idea/
 source/
+node_modules/
 test/
 bin/tests
 .babelrc
